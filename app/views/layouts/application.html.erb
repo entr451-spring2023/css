@@ -7,11 +7,7 @@
   <title>Tacostagram</title>
 </head>
 
-<body>
-  <div>
-    <%= flash["notice"] %>
-  </div>
-  
+<body>  
   <div>
     <% if @current_user %>
       Logged in as: <%= @current_user["first_name"] %> |
@@ -22,9 +18,15 @@
     <% end %>
   </div>
 
-  <h1>Tacostagram</h1>
   <div>
-    <a href="/posts/new/">New Post</a>
+    <%= flash["notice"] %>
+  </div>
+
+  <div>
+    <h1>Tacostagram</h1>
+    <div>
+      <a href="/posts/new/">New Post</a>
+    </div>
   </div>
 
   <%= yield %>
